@@ -25,7 +25,185 @@
           Fill in the details below to enroll your child in the Estrelas do Amanhã
           kindergarten school.
         </p>
+        <form method="post" enctype="multipart/form-data">
+          <fieldset class="child-info">
+            <legend>Child Information</legend>
 
+            <div class="input-wrapper">
+              <label for="fullname"> Full Name </label>
+              <input id="fullname" type="text" placeholder="What is the child's name" />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="birth">Date of Birth</label>
+              <input id="birth" type="date" name="birth" lang="en" />
+            </div>
+
+            <div class="select">
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender">
+                <option value=""></option>
+                <option value="Female">Male</option>
+                <option value="Male">Female</option>
+                <option value="Na">Prefer not to say</option>
+              </select>
+            </div>
+
+            <div class="textarea-wrapper">
+              <label for="medical-info"> Medical Information</label>
+              <textarea name="medical-info" id="medical-info" cols="30" rows="6"
+                placeholder="Does the child have any medical conditions that the school should be aware of? (If yes, please specify)"></textarea>
+            </div>
+
+            <div class="droparea-wrapper">
+              <label for="birth-file">Birth Certificate</label>
+              <div class="dropzone">
+                <input type="file" id="birth-file" name="birth-file" />
+                <img src="assets/icon/upload.svg" alt="Upload Icon" />
+
+                <p>
+                  Click here to <br />
+                  select files
+                </p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="address">
+            <legend>Home Address</legend>
+            <div class="input-wrapper">
+              <label for="Cep">ZIP Code</label><input type="text" id="Cep" name="Cep" />
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper flex-2">
+                <label for="Street">Street</label><input type="text" id="Street" name="Street" value="Rua das Flores"
+                  disabled />
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="Number">Number</label><input type="text" id="Number" name="Number" value="123" />
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper flex-2">
+                <label for="City">City</label><input type="text" id="City" name="City" value="São Paulo" disabled />
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="State">State</label><input type="text" id="State" name="State" value="SP" disabled />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="guardian">
+            <legend>Guardian Information</legend>
+            <div class="input-wrapper">
+              <label for="guardian">Guardian's Name</label><input type="text" id="guardian" name="guardian"
+                placeholder="Pedro Kowalski Schumacher" />
+              <small>Main legal guardian and emergency contact</small>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="Phone">Phone</label><input type="tel" id="Phone" name="Phone"
+                placeholder="(41) 992534400" />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="e-mail">Email</label><input type="email" id="mail" name="mail"
+                placeholder="example@gmail.com" required />
+              <div class="error">
+                <img src="assets/icon/alert-circle.svg" alt="Alert Icon" />
+                <span>Enter a valid email</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="enroll-options">
+            <legend>Enrollment Options</legend>
+            <div class="input-wrapper">
+              <label>Select the study shift</label>
+              <div class="radio-wrapper">
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="study-shift" value="morning" id="morning" />
+                  <img src="assets/icon/sun-cloud.svg" alt="Sun with cloud icon" />
+                  <label for="morning"> Morning</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="study-shift" value="afternoon" id="afternoon" />
+                  <img src="assets/icon/sun.svg" alt="Sun icon" />
+                  <label for="afternoon"> Afternoon</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label>In which sport would you like to enroll your child?</label>
+              <div class="radio-wrapper">
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="football" />
+                  <img src="assets/icon/football.svg" alt="Football icon" />
+                  <label for="football"> Football</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="basketball" />
+                  <img src="assets/icon/basketball.svg" alt="Basketball icon" />
+                  <label for="basketball"> Basketball</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="swimming" />
+                  <img src="assets/icon/swimming.svg" alt="Swimming icon" />
+                  <label for="swimming"> Swimming</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="yoga" />
+                  <img src="assets/icon/yoga.svg" alt="Yoga icon" />
+                  <label for="yoga"> Yoga</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="volleyball" />
+                  <img src="assets/icon/volleyball.svg" alt="Volleyball icon" />
+                  <label for="volleyball"> Volleyball</label>
+                </div>
+
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="boxing" />
+                  <img src="assets/icon/boxing-glove.svg" alt="Boxing glove icon" />
+                  <label for="boxing"> Boxing</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="terms-wrapper input-wrapper checkbox-wrapper">
+            <div class="checkbox-image"></div>
+            <input type="checkbox" name="terms" id="terms" />
+            <label for="terms">
+              I declare that I have read and agree to the
+              <strong> Terms and Conditions</strong> and the
+              <strong> Privacy Policy</strong> of the Estrela do Amanhã school.
+            </label>
+          </div>
+          <div class="actions-wrapper">
+            <button class="btn-secondary" type="button">
+              Save Responses
+            </button>
+
+            <button class="btn-primary">Enroll</button>
+          </div>
+        </form>
       </div>
     </main>
     <aside>
